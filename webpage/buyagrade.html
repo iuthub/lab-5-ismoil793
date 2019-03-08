@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <!-- it will work with XHTML it will automatically put "/" for tags -->
+<html xmlns="http://www.w3.org/1999/xhtml"> <!--  -->
 	<head>
 		<title>Buy Your Way to a Better Education!</title>
 		<link href="buyagrade.css" type="text/css" rel="stylesheet" />
@@ -13,27 +13,38 @@
 		</p>
 		
 		<hr />
-		
-		<h2>Give Us Your Money</h2>
-		<dl>
-			<dt>Name</dt>
-			<dd>
-				???
-			</dd>
-			
-			<dt>Section</dt>
-			<dd>
-				???
-			</dd>
-			
-			<dt>Credit Card</dt>
-			<dd>
-				???
-			</dd>
-		</dl>
-		
-		<div>
-			I am a giant sucker.
-		</div>
+		<form action="sucker.php" method="post">
+			<h2>Give Us Your Money</h2>
+			<dl>                                    <!-- dl -->
+				<dt>Name</dt>                       <!-- dt -->
+				<dd>								<!-- dd -->	
+					<input type="text" name="name" />
+				</dd>
+
+				<dt>Section</dt>
+				<dd>
+					<select name="section" id="">
+						<option value="MA">MA</option>
+						<option value="MB">MB</option>
+						<option value="MD">MD</option>
+						<option value="ME">ME</option>
+						<option value="MF">MF</option>
+						<option value="MG">MG</option>
+						<option value="MH">MH</option>
+					</select>
+				</dd>
+
+				<dt>Credit Card</dt>
+				<dd>
+					<input type="text" name="cardNumber" /> <br />
+					<input type="radio" value="Visa" name="cardType" />Visa
+					<input type="radio" value="Master" name="cardType" />Master Card
+				</dd>
+			</dl>
+
+			<div>
+				<input type="submit" name="submit" value="I am a giant sucker." />
+			</div>
+		</form>
 	</body>
 </html>
